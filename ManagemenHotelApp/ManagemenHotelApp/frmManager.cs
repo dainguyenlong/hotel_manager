@@ -19,7 +19,8 @@ namespace ManagemenHotelApp
 
         private void frmManager_Load(object sender, EventArgs e)
         {
-
+            userRoom1.Visible = false;
+            userManaEm1.Visible = true;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -35,8 +36,9 @@ namespace ManagemenHotelApp
             btnManaService.Checked = false;
             btnSta.Checked = false;
             btnManaEm.Checked = true;
-            
 
+            userManaEm1.Visible = true;
+            userManaEm1.BringToFront();
             btnTextContent.Text = btnManaEm.Text;
         }
 
@@ -50,6 +52,8 @@ namespace ManagemenHotelApp
 
             btnManaRoom.Checked = true;
 
+            userRoom1.Visible = true;
+            userRoom1.BringToFront();
             btnTextContent.Text = btnManaRoom.Text;
         }
 
@@ -94,6 +98,13 @@ namespace ManagemenHotelApp
         private void pnContent_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login f = new frm_Login();
+            f.Show();
         }
     }
 }

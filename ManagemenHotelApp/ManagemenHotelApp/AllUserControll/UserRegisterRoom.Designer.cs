@@ -71,9 +71,6 @@
             this.txtDayCrea = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbCustumer = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.makhachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hotenkh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +78,10 @@
             this.socmnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sodienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quoctich = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNote = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.tbRoomNull)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCustumer)).BeginInit();
             this.SuspendLayout();
@@ -106,7 +107,7 @@
             this.txtNameSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNameSearch.HoverState.Parent = this.txtNameSearch;
             this.txtNameSearch.Location = new System.Drawing.Point(291, 33);
-            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9, 9, 9, 9);
+            this.txtNameSearch.Margin = new System.Windows.Forms.Padding(9);
             this.txtNameSearch.Name = "txtNameSearch";
             this.txtNameSearch.PasswordChar = '\0';
             this.txtNameSearch.PlaceholderText = "Nhập tên khách hàng để tìm kiếm khách hàng cần đặt phòng";
@@ -176,7 +177,7 @@
             this.tbRoomNull.EnableHeadersVisualStyles = false;
             this.tbRoomNull.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbRoomNull.Location = new System.Drawing.Point(53, 308);
-            this.tbRoomNull.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbRoomNull.Margin = new System.Windows.Forms.Padding(4);
             this.tbRoomNull.Name = "tbRoomNull";
             this.tbRoomNull.RowHeadersVisible = false;
             this.tbRoomNull.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -310,7 +311,7 @@
             this.btnBookRoom.ForeColor = System.Drawing.Color.White;
             this.btnBookRoom.HoverState.Parent = this.btnBookRoom;
             this.btnBookRoom.Location = new System.Drawing.Point(1181, 759);
-            this.btnBookRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBookRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnBookRoom.Name = "btnBookRoom";
             this.btnBookRoom.ShadowDecoration.Parent = this.btnBookRoom;
             this.btnBookRoom.Size = new System.Drawing.Size(351, 62);
@@ -611,7 +612,7 @@
             this.txtDayCrea.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.txtDayCrea.HoverState.Parent = this.txtDayCrea;
             this.txtDayCrea.Location = new System.Drawing.Point(1197, 670);
-            this.txtDayCrea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDayCrea.Margin = new System.Windows.Forms.Padding(4);
             this.txtDayCrea.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDayCrea.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.txtDayCrea.Name = "txtDayCrea";
@@ -625,7 +626,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(556, 506);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 4);
             this.panel1.TabIndex = 89;
@@ -667,7 +668,7 @@
             this.tbCustumer.EnableHeadersVisualStyles = false;
             this.tbCustumer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.Location = new System.Drawing.Point(56, 128);
-            this.tbCustumer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCustumer.Margin = new System.Windows.Forms.Padding(4);
             this.tbCustumer.Name = "tbCustumer";
             this.tbCustumer.RowHeadersVisible = false;
             this.tbCustumer.RowHeadersWidth = 40;
@@ -697,44 +698,6 @@
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.tbCustumer.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.tbCustumer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustumer_CellContentClick);
-            // 
-            // txtNote
-            // 
-            this.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNote.DefaultText = "";
-            this.txtNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNote.DisabledState.Parent = this.txtNote;
-            this.txtNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNote.FocusedState.Parent = this.txtNote;
-            this.txtNote.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNote.HoverState.Parent = this.txtNote;
-            this.txtNote.Location = new System.Drawing.Point(53, 779);
-            this.txtNote.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.txtNote.Name = "txtNote";
-            this.txtNote.PasswordChar = '\0';
-            this.txtNote.PlaceholderText = "Nhập ghi chú nếu có";
-            this.txtNote.ReadOnly = true;
-            this.txtNote.SelectedText = "";
-            this.txtNote.ShadowDecoration.Parent = this.txtNote;
-            this.txtNote.Size = new System.Drawing.Size(1080, 42);
-            this.txtNote.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtNote.TabIndex = 92;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(47, 747);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(85, 23);
-            this.label12.TabIndex = 91;
-            this.label12.Text = "Ghi chú";
             // 
             // makhachhang
             // 
@@ -778,11 +741,57 @@
             this.quoctich.HeaderText = "Quốc Tịch";
             this.quoctich.Name = "quoctich";
             // 
+            // txtNote
+            // 
+            this.txtNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNote.DefaultText = "";
+            this.txtNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.DisabledState.Parent = this.txtNote;
+            this.txtNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.FocusedState.Parent = this.txtNote;
+            this.txtNote.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNote.HoverState.Parent = this.txtNote;
+            this.txtNote.Location = new System.Drawing.Point(53, 779);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.txtNote.Name = "txtNote";
+            this.txtNote.PasswordChar = '\0';
+            this.txtNote.PlaceholderText = "Nhập ghi chú nếu có";
+            this.txtNote.ReadOnly = true;
+            this.txtNote.SelectedText = "";
+            this.txtNote.ShadowDecoration.Parent = this.txtNote;
+            this.txtNote.Size = new System.Drawing.Size(1080, 42);
+            this.txtNote.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtNote.TabIndex = 92;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(47, 747);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 23);
+            this.label12.TabIndex = 91;
+            this.label12.Text = "Ghi chú";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(1427, 694);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 93;
+            // 
             // UserRegisterRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.tbCustumer);
@@ -811,7 +820,7 @@
             this.Controls.Add(this.tbRoomNull);
             this.Controls.Add(this.txtNameSearch);
             this.Controls.Add(this.btnSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserRegisterRoom";
             this.Size = new System.Drawing.Size(1668, 857);
             this.Load += new System.EventHandler(this.UserRegisterRoom_Load);
@@ -872,5 +881,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn socmnd;
         private System.Windows.Forms.DataGridViewTextBoxColumn sodienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn quoctich;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

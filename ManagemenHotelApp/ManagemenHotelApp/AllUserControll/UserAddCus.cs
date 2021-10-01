@@ -56,8 +56,6 @@ namespace ManagemenHotelApp.AllUserControll
                     String nati = txtNationnaly.Text;
                     String sex = txtSex.Text;
                     String note = txtNote.Text;
-                    MessageBox.Show(name);
-
                     try{
                             query = "insert into KhachHang (hotenkh,gioitinh,ngaysinh,socccd,sodienthoai,quoctich,ghichu) values (N'" + name + "',N'" + sex + "',N'" + DofB + "',N'" + ccNum + "',N'" + phone + "',N'" + nati + "',N'" + note + "')";           
                             cn.setData(query, "Đã thêm khách hàng");

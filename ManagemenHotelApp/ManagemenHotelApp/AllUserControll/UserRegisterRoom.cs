@@ -102,11 +102,11 @@ namespace ManagemenHotelApp.AllUserControll
                         String idnv = this.Tag.ToString();
                         query = @"insert into hoadonphong (idkhachhang, idnhanvien, ngaytao, ghichu) 
                             values (N'" + txtIDCus.Text + "',N'" + idnv + "','" + txtDayCrea.Value + "',N'" + txtNote.Text + "')";
-                        cn.setData(query, "Tạo hóa đơn thành công");
+                        cn.setData(query, "");
                     }
                     //Sau khi xác định được hóa đơn cần thêm phòng thì tiến hành thêm phòng vào bảng chi tiết của idhoadon
                     query = @"insert into ct_hoadonphong (idhoadon, idphong) values (N'" + lbIdhoadon.Text + "', N'" + txtIDRoom.Text + "')";
-                    cn.setData(query, "Đã thêm phòng vừa chọn vào hóa đơn tạo!");
+                    cn.setData(query, "");
                     //Cập nhật lại trạng thái của phòng vừa được đặt
                     query = @"update Phong set trangthai = '0' where idphong = '" + txtIDRoom.Text + "'";
                     cn.setData(query, "Đã hoàn tất đặt phòng! Tiếp tục thêm đặt thêm phòng cho khách hàng này nếu có yêu cầu. ");

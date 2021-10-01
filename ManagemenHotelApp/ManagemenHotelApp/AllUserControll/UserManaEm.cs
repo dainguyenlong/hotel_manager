@@ -469,6 +469,14 @@ namespace ManagemenHotelApp.AllUserControll
             }
         }
 
-        
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNewDuty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,10 +12,10 @@ namespace ManagemenHotelApp
     class ConnectBase
     {
         protected SqlConnection getConnection()
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"data source = DESKTOP-OA1P7JF;database = ManaHotelDB; Integrated Security=True";
-            return con;
+        {       
+                SqlConnection con = new SqlConnection();
+                con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=N:\cdio\ManagemenHotelApp\ManagemenHotelApp\QLKS.mdf;Integrated Security=True";
+                return con;       
         }
 
         public DataSet getData(String query)
@@ -38,8 +38,11 @@ namespace ManagemenHotelApp
             cmd.CommandText = query;
             cmd.ExecuteNonQuery();
             con.Close();
-
-            MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if(message != "")
+            {
+                MessageBox.Show("'" + message + "'", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }

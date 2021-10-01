@@ -69,11 +69,12 @@ namespace ManagemenHotelApp
             //        txtUsername.Focus();
             //    }
             //}
-            query = @"Select taikhoan.idnhanvien, hotennv, idchucvu, trangthai from taikhoan,nhanvien where taikhoan.idnhanvien = nhanvien.idnhanvien and username = '"+txtUsername.Text+"'and pass = '"+txtPassword.Text+"'";
+            query = @"Select taikhoan.idnhanvien, hotennv, idchucvu, trangthai from taikhoan,nhanvien where taikhoan.idnhanvien = nhanvien.idnhanvien and username = '" + txtUsername.Text + "'and pass = '" + txtPassword.Text + "'";
             DataSet ds = cn.getData(query);
-            if(ds.Tables[0].Rows.Count != 0)
+            if (ds.Tables[0].Rows.Count != 0)
             {
-                if(ds.Tables[0].Rows[0][3].ToString() == "True") {
+                if (ds.Tables[0].Rows[0][3].ToString() == "True")
+                {
                     lbWarning.Visible = false;
                     String[] arr = new String[2];
                     arr[0] = ds.Tables[0].Rows[0][0].ToString();
@@ -81,12 +82,13 @@ namespace ManagemenHotelApp
                     frm_Main fr = new frm_Main(arr);
                     this.Hide();
                     fr.Show();
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Tài khoản của nhân viên đã bị khóa. Vui lòng nhập lại!", "Cảnh báo!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else if(txtUsername.Text == "Admin" && txtPassword.Text =="admin")
+            else if (txtUsername.Text == "a" && txtPassword.Text =="1")
             {
                 lbWarning.Visible = false;
                 frmManager fr = new frmManager();

@@ -216,6 +216,11 @@ namespace ManagemenHotelApp
             btnAddCus.PerformClick();
         }
 
-       
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login f = new frm_Login();
+            f.Show();
+        }
     }
 }
